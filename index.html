@@ -9,20 +9,41 @@
 <form action="" method="post">
     <fieldset>
         <legend>Acceso de Usuario</legend>
-            <div><label for="Usuario">User</label> <input type=text name="Usuario" id="Usuario" title="Ingrese su Usuario" placeholder="usuario"></div>
-            <div><label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email" required placeholder="email"></div>
+            <div><label for="Usuario">Usuario</label> <input type=text name="Usuario" required id="Usuario" title="Ingrese su Usuario" placeholder="Usuario">
+            <label for="pass">Password</label> <input type="password" id="pass" name="pass" minlength="8" required placeholder="min. 8 caracteres"></div>
+            <div><label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email" required placeholder="ejemplo@correo.com"></div>
     </fieldset>
 <fieldset>
     <legend>Datos Personales</legend>
         <div>
-            </label><input type=text name="" id="" title="Ingrese su Nombre" placeholder="Nombre">
+            <input type=text name="" id="" title="Ingrese su Nombre" placeholder="Nombre">
             <input type=text name="" id="" title="Ingrese su Apellido" placeholder="Apellido">
             <input type=text name="" id="" title="Ingrese su DNI" placeholder="DNI">        
+            <label for="nacimiento">Fecha de Nacimiento:</label> <input type="date" id="nacimiento" name="fecha_nacimiento" required>
         </div>
         <div>
             <input type=text name="" id="" title="Ingrese su LinkedIn" placeholder="LinkedIn">
-            <input type=text name="" id="" title="Ingrese su Grupo Sanguíneo" placeholder="Grupo Sanguíneo">
-            <input type=text name="" id="" title="Ingrese su Estado Civil" placeholder="Estado Civil">
+            <div>
+                <legend>Grupo Sanguíneo:</legend>
+                <input type="radio" id="a_pos" name="sangre" value="a_pos" required>
+                <label for="a_pos">A+</label>
+    
+                <input type="radio" id="o_pos" name="sangre" value="o_pos">
+                <label for="o_pos">O+</label>
+    
+                <input type="radio" id="otro" name="sangre" value="otro">
+                <label for="otro">Otro</label>
+            </div>
+            <div> <label for="estado_civil">Estado Civil:</label>
+                <select id="estado_civil" name="estado_civil" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="soltero">Soltero/a</option>
+                    <option value="casado">Casado/a</option>
+                    <option value="divorciado">Divorciado/a</option>
+                    <option value="viudo">Viudo/a</option>
+                    <option value="me_nefrega">Me ne frega</option>
+                </select>
+            </div>
         </div>
 </fieldset>
 
