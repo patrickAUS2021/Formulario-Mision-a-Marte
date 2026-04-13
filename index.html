@@ -9,8 +9,8 @@
 <form action="" method="post">
     <fieldset>
         <legend>Acceso de Usuario</legend>
-            <div><label for="Usuario">Usuario</label> <input type=text name="Usuario" required id="Usuario" title="Ingrese su Usuario" placeholder="Usuario">
-            <label for="pass">Password</label> <input type="password" id="pass" name="pass" minlength="8" required placeholder="min. 8 caracteres"></div>
+            <div><label for="Usuario">Usuario</label> <input type="text" name="Usuario" required id="Usuario" title="Ingrese su Usuario" placeholder="Usuario">
+            <label for="pass">Password</label> <input type="password" id="pass" name="pass" minlength="8" autocomplete="current-password" required placeholder="min. 8 caracteres"></div>
             <div><label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email" required placeholder="ejemplo@correo.com"></div>
     </fieldset>
 <fieldset>
@@ -46,7 +46,18 @@
             </div>
         </div>
 </fieldset>
+<fieldset>
+    <legend>Lenguajes de Programación</legend>
+    
+    <input type="checkbox" id="html" name="habilidades" value="html">
+    <label for="html">HTML</label>
 
+    <input type="checkbox" id="css" name="habilidades" value="css">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" id="js" name="habilidades" value="js">
+    <label for="js">JavaScript</label>
+</fieldset>
 <fieldset>
     <legend>Datos de Contacto</legend>
         <div>
@@ -58,11 +69,23 @@
             <label for="">Localidad</label> <input type="text" name="" id="" title="Ingrese su Localidad">
         </div>
         <div>
-            <label for="">Provincia</label> <input type="text" name="" id="" title="Ingrese su Provincia">
+            <label for="provincia">Provincia</label> <select id="provincia" name="provincia" required>
+                <option value="">Seleccioná tu provincia</option>
+                <option value="buenos_aires">Buenos Aires</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="santa_fe">Santa Fe</option>
+                </select>
             <label for="">País</label> <input type="text" name="" id="" title="Ingrese su País">
         </div>
+        <div><label for="cp">Código Postal:</label> <input 
+        type="text" id="cp" name="codigo_postal" title="Debe tener 4 números" placeholder="Ej: 1425">
+        </div>
 </fieldset>
-
+<fieldset>
+    <legend>Información Adicional</legend>
+    <label for="comentarios">Detalle motivacional:</label>
+    <textarea name="comentarios" id="comentarios" rols="4" cols="60" placeholder="Escriba aquí los detalles de su postulación."></textarea>
+</fieldset>
 <fieldset>
     <input type="Submit">
     <input type="button" value="发送">
